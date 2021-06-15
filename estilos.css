@@ -1,0 +1,225 @@
+body {
+    margin-top: 8vh;
+    background-color: #eee;
+}
+
+#main {
+    text-align: center;
+    padding: 0 .5em;
+}
+
+/* Container */
+#container {
+    background-color: #fff;
+    
+    -webkit-box-shadow: .01em -.05em .2em #999;
+    -moz-box-shadow: .01em -.05em .2em #999;
+    box-shadow: .01em -.05em .2em #999;
+    
+    max-width: 30em;
+    
+    padding: .5em 0;
+    
+    margin: 0 auto;
+    
+    -webkit-border-radius: .12em;
+    -moz-border-radius: .12em;
+    border-radius: .12em;
+}
+
+#inside-container {
+    margin-bottom: 1em;
+}
+
+
+/* Header container */
+.alert {
+    margin: .2em 0 0;
+    padding: .2em 0;
+    height: 1em;
+    visibility: hidden;
+    font-family: 'Hammersmith One', sans-serif;
+}
+.warning {
+    background-color: rgba(245, 71, 72, .2);
+    color: rgb(245, 71, 72);
+    visibility: visible;
+}
+
+.success {
+    background-color: rgba(10, 209, 133, .2);
+    color: #0AD185;
+    visibility: visible;
+}
+
+@keyframes appear {
+    0% {
+        visibility: visible;
+        height: auto;
+        padding: .2em 0;
+        margin-top: .2em;
+    }
+    
+    100% {
+        visibility: hidden;
+        height: 0;
+        padding: 0;
+        margin: 0;
+    }
+}
+
+#title-list {
+    font-family: 'Hammersmith One', sans-serif;
+    margin-top: .5em;
+}
+
+#form {
+    font-family: 'Source Code Pro', monospace;
+}
+
+#text-item {
+    border: none;
+    outline: none;
+    padding: .3em;
+    
+    -webkit-box-shadow: 0 0 .2em #ddd;
+    box-shadow: 0 0 .2em #ddd;
+}
+#text-item:focus {
+    background-color: #39a9cb;
+    background-color: rgba(57, 169, 203, .3);
+    -webkit-box-shadow: 0 0 .1em #2940d3;
+    box-shadow: 0 0 .1em #2940d3;
+}
+
+
+#submit-btn {
+    text-transform: capitalize;
+    background-color: #590995;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-top: .5em;
+    padding: .25em;
+    
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+    border-radius: .3em;
+    
+    -webkit-box-shadow: 0 0 .2em #ddd;
+    box-shadow: 0 0 .2em #ddd;
+    
+    cursor: pointer;
+}
+#submit-btn:active {
+    background-color: #410F66;
+    color: #ccc;
+}
+
+.cont-header { margin-bottom: 1em; }
+
+
+/* Container items */
+.cont-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    
+    padding: 0 .6em;
+    font-family: 'Source Code Pro', monospace;
+}
+
+#to-do-list { width: 100%; }
+
+#to-do-list td {
+    margin: .5em 0;
+    width: 100%;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.icon { cursor: pointer; }
+
+.fa-edit { color: #2940d3; }
+.fa-edit:active { color: #132387; }
+
+.fa-trash {
+    margin-left: .3em;
+    color: #FF0000;
+}
+.fa-trash:active { color: #B40A0A; }
+
+
+/* Div to clear all the items */
+.clear-items { display: none; }
+
+.show-clear-items {
+    font-family: 'Noto Sans', sans-serif;
+    display: inline-block;
+    margin-top: 1em;
+    background: transparent;
+    color: #f54748;
+    font-weight: bolder;
+    padding: .1em .5em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    -webkit-border-radius: .3em;
+    -moz-border-radius: .3em;
+    border-radius: .3em;
+}
+
+.show-clear-items:active {
+    background-color: #f54748;
+    color: #fff;
+}
+
+
+/* Media queries */
+@media only screen and (min-width: 293px) {
+    #inside-container { padding: 0 .5em; }
+    
+    #form {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    #text-item {
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 4;
+        grid-column: 1 / 5;
+    }
+    
+    #submit-btn {
+        -webkit-border-radius: 0 .3em .3em 0;
+        -moz-border-radius: 0 .3em .3em 0;
+        border-radius: 0 .3em .3em 0;
+        
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 576px) {
+    #inside-container { padding: 0 1.5em; }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de Quehaceres</title>
+    
+    <!-- Favicon -->
+    <link rel="favicon" href="https://www.pngitem.com/pimgs/m/164-1649299_do-todo-list-icon-hd-png-download.png" type="image/x-icon" />
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="Normalize.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="estilos.css" type="text/css" media="all" />
+    
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Noto+Sans:wght@700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main id="main">
+        <section id="container">
+            <div id="inside-container">
+                <div class="cont-header">
+                    <p class="alert"></p>
+                    <h1 id="title-list">Cosas por hacer</h1>
+                    <form id="form" method="get" accept-charset="utf-8">
+                        <input type="text" name="text-item" id="text-item" placeholder="p. ej. codificar" />
+                        <button type="submit" id="submit-btn">enviar</button>
+                    </form>
+                </div>
+                <div class="cont-items">
+                    <table id="to-do-list">
+                        <tbody class="body-table">
+                            <!-- Esta es la lista -->
+                        </tbody>
+                    </table>
+                    <button type="button" class="clear-items">Borrar lista</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JS -->
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
